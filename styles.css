@@ -1175,7 +1175,7 @@ footer {
 /* second grid */
 @media (max-width: 768px) {
   .secondGrid {
-    padding: 2rem;
+    padding: 1cap;
   }
 
   .second {
