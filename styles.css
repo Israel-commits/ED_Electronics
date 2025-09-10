@@ -1175,7 +1175,7 @@ footer {
 /* second grid */
 @media (max-width: 768px) {
   .secondGrid {
-    padding: 2rem 1rem;
+    padding: 2rem;
   }
 
   .second {
@@ -1375,7 +1375,7 @@ footer {
 /* footer */
 @media (max-width: 768px) {
     .footer-column-logo h3 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .footer-column-logo {
@@ -1386,7 +1386,7 @@ footer {
 
     .footer-column-logo p {
         font-size: 13px;
-        width: 80%;
+        width: 100%;
     }
 
     .footer-col {
