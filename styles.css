@@ -38,7 +38,7 @@ header{
     justify-content: space-around;
     position: relative;
 }
-.shop {
+.sale {
     background-color: #4ADA67;
     color: #fff;
     font-size: 14px;
@@ -50,7 +50,7 @@ header{
     justify-content: center;
     position: absolute;
     top: 10px;
-    left: 25%;
+    left: 26%;
 }
 .new {
     background-color: #0679F5;
@@ -64,7 +64,7 @@ header{
     justify-content: center;
     position: absolute;
     top: 10px;
-    left: 32%;
+    left: 34%;
 }
 .hot {
     background-color: #E22C33;
@@ -78,7 +78,7 @@ header{
     justify-content: center;
     position: absolute;
     top: 10px;
-    left: 42%;
+    left: 43%;
 }
 nav ul {
  display: inline-flex;
@@ -89,6 +89,7 @@ nav ul {
  color: #297D2E;
  font-size: 16px;
  margin-right: 12rem;
+ background-color: transparent;
 }
 nav ul a {
     display: inline-flex;
@@ -903,80 +904,117 @@ footer {
 
 
 /* mobile responsiveness codes */
+/* ====== Mobile responsiveness ====== */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px 0 2px;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-        font-size: 14px;
-        margin-top: 10px;
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        width: 100%;
+        z-index: 1000;
+        padding: 15px;
+        background-color: rgba(0, 0, 0, 0.03);
+        box-shadow: 0 0 4px;
+        backdrop-filter: blur(40px);
+        border: 2px solid #fff;
     }
 
-    .logo h5 {
-        font-size: 20px;
-        margin-right: 0;
+    nav ul li a {
+        background-color: transparent;
     }
 
-    .shop,
-    .new,
-    .hot {
-        position: static; 
-        margin: 5px;
+    .nav-links.active {
+        display: block;
+    }
+
+    .logo {
+        
+        justify-content: flex-end;
     }
 
     .hamburger {
         display: block;
-        font-size: 1rem;
+        font-size: 1.7rem;
+        margin-left: 50px;
+        z-index: 1000;
     }
 
-    .rightBar .rightIn {
-        margin-top: 10px;
-        font-size: 18px;
-        justify-content: flex-end;
+    nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 10px 0;
+    width: 100%;
     }
 
-    .circle {
-        margin-right: 0;
-        left: 85px;
+    .sale {
+        top: 20%;
+        left: 20%;
     }
 
+    .new {
+        top: 30%;
+        left: 25%;
+    }
 
-    .circleB {
-        margin-right: 0;
-        top: -8px;
+    .hot {
+        top: 42%;
+        left: 30%;
     }
 }
 /* hero */
 @media (max-width: 768px) {
     .heroBox {
         flex-direction: column-reverse;
-        padding: 30px 0 0 20px;
+        padding: 30px 0 0;
         text-align: center;
         justify-content: center;
     }
 
+    .hero-txt h5 {
+        font-size: 12px;
+        align-items: center;
+        margin-right: 80px;
+    }
+
     .hero-txt h4 {
-        margin-left: 60px;
+        font-size: 1.1rem;
+        justify-content: center;
+    }
+
+    .hero-txt p {
+        font-size: 13px;
+        width: 70%;
+        margin-left: 20px;
+        justify-content: center;
     }
 
     .heroBox img {
         height: 180px;
         margin: 30px 0; 
         margin-bottom: 60px;
+        margin-right: 80px;
+    }
+
+    .btn {
+        margin-right: 80px;
     }
 }
 /* about */
 @media (max-width: 768px) {
     .card-cont {
-        padding: 10px 40px;
+        padding: 10px 15px;
         justify-content: center;
         margin-top: 80px;
+        margin-right: 80px;
+        width: 20rem;
     }
 
     .card-cont img {
@@ -993,6 +1031,7 @@ footer {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
         margin-top: 20px;
+        padding: 50px;
     }
 
     .product-card {
@@ -1042,39 +1081,52 @@ footer {
   .priceA {
     text-align: center;
     font-size: 14px;
-    margin-left: 160px;
+    margin-left: 80px;
     margin-top: 5px;
     align-items: center;
     justify-content: center;
   }
 
   .rating {
-    margin-left: 200px;
     margin-top: 5px;
+    margin-left: 120px;
   }
 
   .count {
     justify-content: center;
     margin-top: 5px;
+    margin-right: 80px;
+  }
+
+  .stat {
+    margin-right: 80px;
   }
 
   .single-content h4 {
     font-size: 1rem;
+    margin-right: 80px;
   }
 
   .desc {
-    font-size: 15px;
+    font-size: 13px;
+    width: 80%;
     margin-bottom: 5px;
   }
 
   .button-grp {
     margin-top: 30px;
     justify-content: center;
+    margin-right: 80px;
+    
   }
 
   .add {
     padding: 25px 10px;
     font-size: 14px;
+  }
+
+  .bar {
+    width: 80%;
   }
 }
 /* bannerWrapper */
@@ -1090,14 +1142,16 @@ footer {
   }
 
   .banner-text h4 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     text-align: center;
+    margin-right: 30px;
   }
 
   .banner-text p {
-    font-size: 13px;
+    font-size: 12px;
     text-align: center;
     margin-bottom: 1.2rem;
+    margin-right: 40px;
   }
 
   .banner-btn {
@@ -1107,13 +1161,14 @@ footer {
     height: 45px;
     font-size: 14px;
     justify-content: center;
-    margin-left: 120px;
+    margin-left: 50px;
     margin-top: 30px;
   }
 
   .banner-img img {
     margin-top: 30px;
     height: 160px;
+    margin-right: 40px;
   }
 }
 /* second grid */
@@ -1128,9 +1183,18 @@ footer {
   }
 
   .Gridfive {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:  1fr;
     gap: 15px;
     height: auto;
+    padding: 5px 10px 0 10px;
+  }
+
+  .heading h4 {
+    font-size: 1rem;
+  }
+
+  .heading h5 {
+    width: 70%;
   }
 
   .disc {
@@ -1170,6 +1234,7 @@ footer {
   .testimonialBox {
     height: auto;
     padding: 2rem 1rem;
+    margin-right: 80px;
   }
 
   .testimonialBox .left,
@@ -1213,6 +1278,7 @@ footer {
 @media (max-width: 768px) {
   .blog {
     padding: 20px;
+    margin-right: 80px;
   }
 
   .heading {
@@ -1255,11 +1321,13 @@ footer {
     flex-direction: column;
     text-align: center;
     gap: 15px;
+    margin-right: 80px;
   }
 
   .email-txt {
     justify-content: center;
     margin-bottom: 15px;
+    gap: 5px;
   }
 
   .email-txt h4 {
@@ -1297,11 +1365,16 @@ footer {
         display: flex;
         flex-direction: column;
     }
+
+    .fast-item {
+        margin-right: 80px;
+    }
 }
 /* footer */
 @media (max-width: 768px) {
     .footer-column-logo h3 {
-        font-size: 18px;
+        font-size: 22px;
+        margin-right: 40px;
     }
 
     .footer-column-logo {
@@ -1310,9 +1383,19 @@ footer {
         padding: 0 0;
     }
 
+    .footer-column-logo p {
+        font-size: 13px;
+        width: 80%;
+    }
+
     .footer-col {
         display: flex;
         flex-direction: column;
+        margin-right: 80px;
+    }
+
+    .footer-column {
+        margin-right: 80px;
     }
     
     .footerBottom{
