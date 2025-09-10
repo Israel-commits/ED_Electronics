@@ -910,6 +910,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 10px 5px 0 2px;
+    z-index: 1;
     }
 
     .nav-links {
@@ -1199,6 +1200,7 @@ footer {
 
   .disc {
     text-align: center;
+    margin-right: 80px;
   }
   
   .disc .fa-solid {
@@ -1381,11 +1383,13 @@ footer {
         text-align: center;
         font-size: 10px;
         padding: 0 0;
+        margin-right: 80px;
     }
 
     .footer-column-logo p {
         font-size: 13px;
         width: 80%;
+        margin-right: 80px;
     }
 
     .footer-col {
@@ -1400,5 +1404,6 @@ footer {
     
     .footerBottom{
         text-align: center;
+        margin-right: 80px;
     }
 }
