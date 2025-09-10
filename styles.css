@@ -1175,7 +1175,7 @@ footer {
 /* second grid */
 @media (max-width: 768px) {
   .secondGrid {
-    padding: 1cap;
+    padding: 1rem;
   }
 
   .second {
@@ -1235,7 +1235,7 @@ footer {
 @media (max-width: 768px) {
   .testimonialBox {
     height: auto;
-    padding: 2rem 1rem;
+    padding: 1rem;
     margin-right: 80px;
   }
 
@@ -1279,7 +1279,7 @@ footer {
 /* blog */
 @media (max-width: 768px) {
   .blog {
-    padding: 20px;
+    padding: 20px 1rem;
     margin-right: 80px;
   }
 
@@ -1323,7 +1323,6 @@ footer {
     flex-direction: column;
     text-align: center;
     gap: 15px;
-    margin-right: 80px;
   }
 
   .email-txt {
@@ -1369,7 +1368,7 @@ footer {
     }
 
     .fast-item {
-        margin-right: 80px;
+        text-align: center;
     }
 }
 /* footer */
